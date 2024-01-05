@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.login {
+    text-align: center;
+    flex: 1;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    font-family: 'Kanit';
+}
+img {
+    border-radius: 50%;
+}
+h1 {
+    font-size: 52px;
+}
+h2 {
+    font-size: 48px;
+}
+p {
+    font-size: 24px;
+}
