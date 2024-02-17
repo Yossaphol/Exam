@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import img1 from '../assets/teacher.png'
 import Login from '../login'
 
-
 function Headerss() {
 
     const [isRegisterHovered, setRegisterHovered] = useState(false);
@@ -67,7 +66,8 @@ function Headerss() {
         img1: {
             display: "flex",
             justifyContent:"center",
-            alignItems: "center"
+            alignItems: "center",
+            width: "600px"
         },
         BtnRegister: {
             color:"#fff",
@@ -93,6 +93,12 @@ function Headerss() {
             background: isCodeHovered ? "#66b2ba" : "#00000000",
             color: isCodeHovered ? "#fff" : "#66b2ba",
             transition: "background-color 0.2s, color 0.2s",
+        },
+        aLink : {
+            fontSize: " 32px",
+            textDecoration: "none",
+            color: "#333",
+            fontWeight: "bold"
         }
       }
   return (
@@ -100,10 +106,10 @@ function Headerss() {
       <div style={styles.header}>
             <ul style={styles.ul}>
                 <div className="logo">
-                    <h3 style={{fontSize:32}}>PROEDGE</h3>
+                    <a href="/" style={styles.aLink}>PROEDGE</a>
                 </div>
                 <div>
-                    <a href="" style={styles.regis} onMouseEnter={handleRegisterHover} onMouseLeave={handleRegisterLeave}>Sign in with Google</a>
+                    <a href="/login" style={styles.regis} onMouseEnter={handleRegisterHover} onMouseLeave={handleRegisterLeave}>Sign in with Google</a>
                 </div>
             </ul>
       </div>
@@ -113,7 +119,11 @@ function Headerss() {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam molestias qui tempore odit minima at aliquid totam excepturi, sapiente perspiciatis.</p>
                 <div style={{marginTop:40}}>
                     {/* <a href="" style={styles.BtnRegister} onMouseEnter={handleRegisterHover} onMouseLeave={handleRegisterLeave}>Register</a> */}
-                    <a href="" style={styles.BtnCoderoom} onMouseEnter={handleCodeHover} onMouseLeave={handleCodeLeave}>Join a game</a>
+                    <a href="../Forms/cj" style={styles.BtnCoderoom} onMouseEnter={handleCodeHover} onMouseLeave={handleCodeLeave}>Join a room</a>
+                </div>
+                <div style={{marginTop:40}}>
+                    {/* <a href="" style={styles.BtnRegister} onMouseEnter={handleRegisterHover} onMouseLeave={handleRegisterLeave}>Register</a> */}
+                    <a href="../test" style={styles.BtnCoderoom} onMouseEnter={handleCodeHover} onMouseLeave={handleCodeLeave}>Join a game</a>
                 </div>
             </div>
             <div style={styles.rt}>
